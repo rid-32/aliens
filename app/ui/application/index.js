@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 
-import Page from 'ui/page'
+import Canvas from './Canvas'
 
 class Application extends Component {
   render() {
-    return <Page />
+    return <Canvas />
   }
 }
 
