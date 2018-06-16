@@ -1,11 +1,12 @@
 import React from 'react'
 
 import Sky from './Sky'
+import Ground from './Ground'
 
 const Canvas = () => {
   const viewBox = [
-    window.innerWidth / -2,
-    100 - window.innerHeight,
+    window.innerWidth / 2,
+    window.innerHeight - 100,
     window.innerWidth,
     window.innerHeight,
   ]
@@ -14,10 +15,12 @@ const Canvas = () => {
     <svg
       id="aliens-go-home-canvas"
       preserveAspectRatio="none"
-      viewBox={viewBox}
+      width={viewBox[2]}
+      height={viewBox[3]}
     >
       <Sky />
-      <circle cx={0} cy={0} r={50} />
+      <Ground />
+      <circle cx={viewBox[0]} cy={viewBox[1]} r={50} />
     </svg>
   )
 }
